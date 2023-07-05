@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Rubik:wght@400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
+
+}
+
+.ant-btn-primary{
+  background-color: #1677ff !important;
+}
+
+.ant-btn-primary:hover{
+  opacity: 75%;
+}
+
+.ant-btn-dangerous{
+  background-color: red !important;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-visible::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-visible{
+  -ms-overflow-style: auto;  /* IE and Edge */
+  scrollbar-width: auto;  /* Firefox */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* ----- HOME PAGE ----- */
+
+.home-page-container{
+  @apply w-full flex gap-5 xl:flex-row lg:flex-row md:flex-col sm:flex-col xs:flex-col items-start !overflow-hidden
+}
+
+.categories-container{
+  @apply xl:inline-block lg:inline-block md:flex sm:flex xs:flex gap-5 pr-1
+
+}
+
+.categories-container{
+   /* RESPONSIVE */  
+  @apply xl:w-[150px] lg:w-[150px] md:w-full sm:w-full xs:w-full
+         xl:h-[85vh] lg:h-[85vh] md:h-[18vh] sm:h-[18vh] xs:h-[18vh] 
+}
+
+.categories-container{
+  /* SCROLLBAR */
+  @apply xl:overflow-y-scroll lg:overflow-y-scroll sm:overflow-y-hidden xs:overflow-y-hidden 
+
+}
+
+.category-item{
+    @apply cursor-pointer transition ease-in bg-green-700 hover:bg-green-500 text-center text-white text-sm font-normal inline-flex items-center justify-center h-[80px] w-[120px] px-10 mb-2
+}
+
+.home-products{
+  @apply xl:w-10/12 lg:w-10/12 w-full xl:h-[85vh] lg:h-[85vh] h-[75vh] overflow-y-scroll flex flex-wrap justify-start gap-2 text-xs
+}
+
+.product-item{
+  @apply h-[120px] xl:w-[120px] lg:w-[120px] md:w-[125px] sm:w-[125px] xs:w-[135px] bg-white border-[1px] border-[#e2e2e2] hover:shadow-lg cursor-pointer
+}
+
+/* ---- HOME SHOPPING CART ----- */
+
+.home-shopping-cart{
+  @apply bg-white xl:h-[90vh] lg:h-[90vh] md:h-[80vh] xl:mb-0 lg:mb-0 md:mb-24 sm:mb-24 xs:mb-24 flex flex-col justify-between
+}
+
+.cart-banner{
+  @apply bg-blue-700 text-white font-normal text-center flex items-center justify-center xl:h-[9vh] lg:h-[9vh] md:h-[9vh] h-16 w-full
+}
+
+.cart-item-container{
+  @apply  h-16 mx-4 my-2 flex items-center justify-between gap-3 
+}
